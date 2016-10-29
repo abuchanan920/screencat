@@ -216,7 +216,7 @@ module.exports = function create () {
       peer.on('data', function (data) {
         if (!pc.robot) return
         console.log(data)
-        pc.robot(data)
+        pc.robot(JSON.parse(data))
       })
       return
     }
@@ -230,7 +230,7 @@ module.exports = function create () {
       var data = getMouseData(e)
       data.click = true
       console.log('send mouseup', data)
-      peer.send(data)
+      peer.send(JSON.stringify(data))
     }
 
     function keydownListener (e) {
@@ -245,7 +245,7 @@ module.exports = function create () {
       }
 
       console.log('send key', data)
-      peer.send(data)
+      peer.send(JSON.stringify(data))
     }
 
     function getMouseData (e) {

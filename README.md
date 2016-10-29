@@ -44,7 +44,9 @@ For mac/linux:
 
 ```bash
 npm install # installs electron and all the deps
+npm run localrebuild # compiles dependencies to match electron version when running locally
 npm start # runs the app in the electron wrapper
+npm run rebuild # compiles dependencies to match electron version when packaged
 npm run build # builds the mac app
 ```
 

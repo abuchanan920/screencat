@@ -1,6 +1,6 @@
 bundle.js
 node_modules
 .DS_Store
-ScreenCat.app
+ScreenCat-*
 ScreenCat.zip
 .sass-cache
